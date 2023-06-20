@@ -18,7 +18,7 @@ class DioHelper {
     );
   }
 
-// make get method and take path and query parameters to send what data we want when we call it
+// make get method and take path and query parameters to get what data we want when we call it
   static Future<Response> getData({
     required String path,
     required Map<String, dynamic> query,
