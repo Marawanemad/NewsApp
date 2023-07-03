@@ -61,13 +61,14 @@ class NewCubit extends Cubit<NewsStates> {
       query: {
         "country": "eg",
         "category": "business",
-        "apiKey": "65f7f556ec76449fa7dc7c0069f040ca"
+        "apiKey": "cee73e39c7394a80a39ea84b4b4f5e9d"
       },
     ).then((value) {
 // store this data in the list and make emit and catch error
       buisness = value.data['articles'];
       emit(getBuisnessDataSuccessState());
     }).catchError((error) {
+      print(error.toString());
       emit(getBuisnessDataErrorState(error));
     });
   }
@@ -85,13 +86,14 @@ class NewCubit extends Cubit<NewsStates> {
         query: {
           "country": "eg",
           "category": "sports",
-          "apiKey": "65f7f556ec76449fa7dc7c0069f040ca"
+          "apiKey": "cee73e39c7394a80a39ea84b4b4f5e9d"
         },
       ).then((value) {
 // store this data in the list and make emit and catch error
         Sports = value.data['articles'];
         emit(getSportsDataSuccessState());
       }).catchError((error) {
+        print(error.toString());
         emit(getSportsDataErrorState(error));
       });
     } else {
@@ -112,7 +114,7 @@ class NewCubit extends Cubit<NewsStates> {
         query: {
           "country": "eg",
           "category": "science",
-          "apiKey": "65f7f556ec76449fa7dc7c0069f040ca"
+          "apiKey": "cee73e39c7394a80a39ea84b4b4f5e9d"
         },
       ).then((value) {
 // store this data in the list and make emit and catch error
@@ -137,7 +139,7 @@ class NewCubit extends Cubit<NewsStates> {
       path: 'v2/everything',
       query: {
         "q": "$value",
-        "apiKey": "65f7f556ec76449fa7dc7c0069f040ca",
+        "apiKey": "cee73e39c7394a80a39ea84b4b4f5e9d",
       },
     ).then((value) {
 // store this data in the list and make emit and catch error
@@ -148,3 +150,6 @@ class NewCubit extends Cubit<NewsStates> {
     });
   }
 }
+
+// API KEY
+// 65f7f556ec76449fa7dc7c0069f040ca

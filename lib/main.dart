@@ -18,11 +18,11 @@ void main() async {
   await CacheHelper.init();
   // to make variable from getter and send it in main to use in app easely
   bool? fromshared = CacheHelper.getModeData(key: "isDark");
-  runApp(MyApp(fromshared));
+  runApp(MyApp(fromshared!));
 }
 
 class MyApp extends StatelessWidget {
-  final fromshared;
+  final bool fromshared;
   const MyApp(this.fromshared, {super.key});
   @override
   Widget build(BuildContext context) {
@@ -53,8 +53,6 @@ class MyApp extends StatelessWidget {
                         color: Colors.black,
                         fontSize: 30,
                         fontWeight: FontWeight.bold),
-                    // to make my control on statusbar(bar over appbar)
-                    backwardsCompatibility: false,
                     toolbarHeight: 55,
                     // to change the upper bar (inside it date,time,battery)
                     systemOverlayStyle: SystemUiOverlayStyle(
@@ -84,8 +82,6 @@ class MyApp extends StatelessWidget {
                         color: Colors.white,
                         fontSize: 30,
                         fontWeight: FontWeight.bold),
-                    // to make my control on statusbar(bar over appbar)
-                    backwardsCompatibility: false,
                     toolbarHeight: 55,
                     // to change the upper bar (inside it date,time,battery)
                     systemOverlayStyle: SystemUiOverlayStyle(

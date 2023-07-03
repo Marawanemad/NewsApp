@@ -61,6 +61,7 @@ class SearchScreen extends StatelessWidget {
                         return 'Search must not be Empty';
                       }
                       NewCubit.get(context).getSearch(searchWord);
+                      return null;
                     },
                   ),
                 ),
