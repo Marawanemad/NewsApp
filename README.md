@@ -24,6 +24,5 @@ A new Flutter project.
   <tr>
     <td align="center"><img width=100% src="https://github.com/Marawanemad/NewsApp/assets/88719313/3e075124-6268-4a7a-bb3f-8e22ab3d76f5"></td>
     <td align="center"><img width=100% src="https://github.com/Marawanemad/NewsApp/assets/88719313/5de1f114-023e-4584-8b00-d62c56a3315d"></td>
-    <td align="center"><img width=100% src=""></td>
   </tr>
 </table>
